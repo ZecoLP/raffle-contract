@@ -7,7 +7,7 @@ A decentralized raffle (lottery) smart contract that uses **Chainlink VRF v2.5**
 This project implements an **automated raffle system** on the blockchain. Users enter by paying an entrance fee. At regular time intervals, the contract uses **Chainlink Automation** to check if a winner should be picked and **Chainlink VRF** to generate a secure, tamper-proof random winner.
 
 > Author: **Zeco Lionel Pratama**  
-> Solidity Version: `^0.8.19`
+> Solidity Version: ^0.8.19
 
 ---
 
@@ -26,7 +26,7 @@ This project implements an **automated raffle system** on the blockchain. Users 
 - **Solidity `^0.8.19`**
 - **Chainlink VRF v2.5** – For verifiable randomness
 - **Chainlink Automation** – For automated execution of winner selection
-- Hardhat or Foundry – For testing and deployment
+- Foundry – For testing and deployment
 
 ---
 
@@ -52,16 +52,16 @@ This project implements an **automated raffle system** on the blockchain. Users 
 
 ## Sample Usage
 
-\`\`\`solidity
+```solidity
 // Player enters the raffle
 raffle.enterRaffle{value: 0.01 ether}();
-\`\`\`
+```
 
 ## Events
 
-- \`RaffleEntered(address indexed player)\`
-- \`RequestedRaffleWinner(uint256 indexed requestId)\`
-- \`WinnerPicked(address indexed winner)\`
+- `RaffleEntered(address indexed player)`
+- `RequestedRaffleWinner(uint256 indexed requestId)`
+- `WinnerPicked(address indexed winner)`
 
 ## Security
 
